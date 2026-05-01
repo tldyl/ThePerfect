@@ -1,0 +1,11 @@
+﻿{
+  "id": "ThePerfect",
+  "name": "完美机器人",
+  "author": "Temple9",
+  "description": "完美机器人角色mod",
+  "version": "1.0.0",
+  "has_pck": true,
+  "has_dll": true,
+  "dependencies": ["BaseLib"],
+  "affects_gameplay": true
+}
