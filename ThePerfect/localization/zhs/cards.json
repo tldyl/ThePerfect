@@ -1,0 +1,6 @@
+{
+  "THEPERFECT-STRIKE_PERFECT.title": "打击",
+  "THEPERFECT-STRIKE_PERFECT.description": "造成{Damage:diff()}点伤害。",
+  "THEPERFECT-DEFEND_PERFECT.title": "防御",
+  "THEPERFECT-DEFEND_PERFECT.description": "获得{Block:diff()}点[gold]格挡[/gold]。"
+}

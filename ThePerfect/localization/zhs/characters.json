@@ -1,0 +1,17 @@
+{
+  "THEPERFECT-THE_PERFECT_CHARACTER.aromaPrinciple": "[sine][blue]1100 0011 1100 0011……[/blue][/sine]",
+  "THEPERFECT-THE_PERFECT_CHARACTER.banter.alive.endTurnPing": "[jitter]0x54494D45 0x204C494D 0x49542045 0x58434545 0x00444544[/jitter]",
+  "THEPERFECT-THE_PERFECT_CHARACTER.banter.dead.endTurnPing": "……",
+  "THEPERFECT-THE_PERFECT_CHARACTER.cardsModifierDescription": "完美机器人的卡牌现在会出现在奖励和商店中。",
+  "THEPERFECT-THE_PERFECT_CHARACTER.cardsModifierTitle": "完美机器人卡牌",
+  "THEPERFECT-THE_PERFECT_CHARACTER.description": "一具不停改造自己来生存下去的自动机械。\n在不得不战斗时，它会使用充能球科技来作战。",
+  "THEPERFECT-THE_PERFECT_CHARACTER.eventDeathPrevention": "为了我的朋友们，我必须活下去！",
+  "THEPERFECT-THE_PERFECT_CHARACTER.goldMonologue": "[sine]这些金币可以用来交换零件……[/sine]",
+  "THEPERFECT-THE_PERFECT_CHARACTER.possessiveAdjective": "它的",
+  "THEPERFECT-THE_PERFECT_CHARACTER.pronounObject": "它",
+  "THEPERFECT-THE_PERFECT_CHARACTER.pronounPossessive": "它的",
+  "THEPERFECT-THE_PERFECT_CHARACTER.pronounSubject": "它",
+  "THEPERFECT-THE_PERFECT_CHARACTER.title": "完美机器人",
+  "THEPERFECT-THE_PERFECT_CHARACTER.titleObject": "完美机器人",
+  "THEPERFECT-THE_PERFECT_CHARACTER.unlockText": "用[pink]{Prerequisite}[/pink]进行一局游戏来解锁这个角色。"
+}

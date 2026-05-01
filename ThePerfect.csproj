@@ -88,14 +88,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="src\DemoMod\ThePerfect\Cards\PerfectCard\" />
-    <Folder Include="src\DemoMod\ThePerfect\Characters\" />
     <Folder Include="src\DemoMod\ThePerfect\Patches\" />
     <Folder Include="src\DemoMod\ThePerfect\Potions\" />
     <Folder Include="src\DemoMod\ThePerfect\Powers\" />
     <Folder Include="src\DemoMod\ThePerfect\Relics\" />
     <Folder Include="ThePerfect\images\cards\" />
-    <Folder Include="ThePerfect\localization\zhs\" />
     <Folder Include="ThePerfect\scenes\" />
   </ItemGroup>
 
