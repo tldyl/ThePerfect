@@ -12,7 +12,7 @@ namespace ThePerfect.Cards.PerfectCard;
 [Pool(typeof(PerfectCardPool))]
 public class DefendPerfect : CustomCardModel {
     protected override IEnumerable<DynamicVar> CanonicalVars => [new BlockVar(5, ValueProp.Move)];
-    //public override string PortraitPath => $"res://TheGleaner/images/cards/{Id.Entry.ToLowerInvariant()}.png";
+    //public override string PortraitPath => $"res://ThePerfect/images/cards/{Id.Entry.ToLowerInvariant()}.png";
     protected override HashSet<CardTag> CanonicalTags => [CardTag.Defend];
     public override bool GainsBlock => true;
 

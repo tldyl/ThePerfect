@@ -3,10 +3,10 @@ using Godot;
 using MegaCrit.Sts2.Core.Entities.Characters;
 using MegaCrit.Sts2.Core.Helpers;
 using MegaCrit.Sts2.Core.Models;
-using MegaCrit.Sts2.Core.Models.Relics;
 using MegaCrit.Sts2.Core.Nodes.Vfx;
 using ThePerfect.Cards.PerfectCard;
 using ThePerfect.Pools;
+using ThePerfect.Relics;
 
 namespace ThePerfect.Characters;
 
@@ -88,11 +88,13 @@ public class ThePerfectCharacter : PlaceholderCharacterModel {
         ModelDb.Card<DefendPerfect>(),
         ModelDb.Card<DefendPerfect>(),
         ModelDb.Card<DefendPerfect>(),
+        ModelDb.Card<Filter>(),
+        ModelDb.Card<WeakCurrent>()
     ];
 
     // 初始遗物
     public override IReadOnlyList<RelicModel> StartingRelics => [
-        ModelDb.Relic<CrackedCore>(),
+        ModelDb.Relic<UpgradedCore>(),
     ];
 
     // 攻击建筑师的攻击特效列表

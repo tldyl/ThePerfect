@@ -1,0 +1,11 @@
+{
+  "THEPERFECT-SELF_REPAIR_POWER.title": "自我修复",
+  "THEPERFECT-SELF_REPAIR_POWER.description": "在战斗结束时，回复[blue]7[/blue]点生命。",
+  "THEPERFECT-SELF_REPAIR_POWER.smartDescription": "在战斗结束时，回复[blue]{Amount}[/blue]点生命。",
+  "THEPERFECT-ELECTRODYNAMICS_POWER.title": "电动力学",
+  "THEPERFECT-ELECTRODYNAMICS_POWER.description": "[gold]闪电[/gold]充能球现在会击中所有敌人。",
+  "THEPERFECT-ELECTRODYNAMICS_POWER.smartDescription": "[gold]闪电[/gold]充能球现在会击中所有敌人。",
+  "THEPERFECT-PREVENTION_POWER.title": "预防",
+  "THEPERFECT-PREVENTION_POWER.description": "下场战斗开始时，获得{energyPrefix:energyIcons(2)}并额外抽[blue]2[/blue]张牌。",
+  "THEPERFECT-PREVENTION_POWER.smartDescription": "下场战斗开始时，获得{Energy:energyIcons()}并额外抽[blue]{Amount}[/blue]张牌。"
+}

@@ -1,0 +1,8 @@
+{
+  "THEPERFECT-SCALEUP.title": "放大",
+  "THEPERFECT-SCALEUP.description": "卡牌耗能增加[blue]1[/blue]，卡牌描述中的所有阿拉伯数字翻倍。",
+  "THEPERFECT-SCALEDOWN.title": "缩小",
+  "THEPERFECT-SCALEDOWN.description": "卡牌耗能变为[blue]0[/blue]，卡牌描述中的所有阿拉伯数字变为[blue]1[/blue]。",
+  "THEPERFECT-SPLIT.title": "拆分",
+  "THEPERFECT-SPLIT.description": "将原卡牌变为其两张复制，复制品的耗能以及卡牌描述中的所有阿拉伯数字减半（均向下取整但不为[blue]0[/blue]）。"
+}
