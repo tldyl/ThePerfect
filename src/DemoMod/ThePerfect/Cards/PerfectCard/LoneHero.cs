@@ -1,7 +1,6 @@
 using BaseLib.Abstracts;
 using BaseLib.Utils;
 using MegaCrit.Sts2.Core.Commands;
-using MegaCrit.Sts2.Core.Commands.Builders;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
@@ -13,30 +12,34 @@ using ThePerfect.Pools;
 namespace ThePerfect.Cards.PerfectCard;
 
 [Pool(typeof(PerfectCardPool))]
-public class Contention : CustomCardModel {
+public class LoneHero : CustomCardModel {
     //public override string PortraitPath => $"res://ThePerfect/images/cards/{Id.Entry.ToLowerInvariant()}.png";
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        new DamageVar(1, ValueProp.Move),
-        new IntVar("Draw", 1)
+        new DamageVar(8, ValueProp.Move)
     ];
 
-    public Contention() : base(0, CardType.Attack, CardRarity.Rare, TargetType.AnyEnemy) {
+    public LoneHero() : base(1, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy) {
         
     }
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay) {
-        AttackCommand command = await DamageCmd.Attack(DynamicVars.Damage.BaseValue)
+        await DamageCmd.Attack(DynamicVars.Damage.BaseValue)
             .FromCard(this)
             .Targeting(cardPlay.Target)
             .Execute(choiceContext);
-        IEnumerable<CardModel> cards = await CardPileCmd.Draw(choiceContext, DynamicVars["Draw"].BaseValue, Owner);
-        DamageResult damageResult = command.Results.FirstOrDefault();
-        if (damageResult != null) {
-            foreach (CardModel card in cards) {
-                card.EnergyCost.SetThisCombat(damageResult.TotalDamage);
-            }
-        }
     }
 
-    protected override void OnUpgrade() => DynamicVars["Draw"].UpgradeValueBy(1);
+    public override Decimal ModifyDamageMultiplicative(
+        Creature? target,
+        Decimal amount,
+        ValueProp props,
+        Creature? dealer,
+        CardModel? cardSource) {
+        if (cardSource != this) {
+            return 1;
+        }
+        return Owner.PlayerCombatState.Hand.Cards.Count <= 1 ? 2 : 1;
+    }
+    
+    protected override void OnUpgrade() => DynamicVars.Damage.UpgradeValueBy(2);
 }

@@ -7,5 +7,8 @@
   "THEPERFECT-ELECTRODYNAMICS_POWER.smartDescription": "[gold]闪电[/gold]充能球现在会击中所有敌人。",
   "THEPERFECT-PREVENTION_POWER.title": "预防",
   "THEPERFECT-PREVENTION_POWER.description": "下场战斗开始时，获得{energyPrefix:energyIcons(2)}并额外抽[blue]2[/blue]张牌。",
-  "THEPERFECT-PREVENTION_POWER.smartDescription": "下场战斗开始时，获得{Energy:energyIcons()}并额外抽[blue]{Amount}[/blue]张牌。"
+  "THEPERFECT-PREVENTION_POWER.smartDescription": "下场战斗开始时，获得{Energy:energyIcons()}并额外抽[blue]{Amount}[/blue]张牌。",
+  "THEPERFECT-NEXT_TURN_FOCUS_POWER.title": "下回合集中",
+  "THEPERFECT-NEXT_TURN_FOCUS_POWER.description": "在你的下个回合结束时，获得[blue]3[/blue]点[gold]集中[/gold]。",
+  "THEPERFECT-NEXT_TURN_FOCUS_POWER.smartDescription": "在你的下个回合结束时，获得[blue]{Amount}[/blue]点[gold]集中[/gold]。"
 }

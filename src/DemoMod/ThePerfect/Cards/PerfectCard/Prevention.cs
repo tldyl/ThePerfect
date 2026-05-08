@@ -27,21 +27,23 @@ public class Prevention : CustomCardModel {
     }
 
     public override async Task AfterSideTurnStart(CombatSide side, CombatState combatState) {
-        if (!Owner.Deck.Cards.Contains(this) || side != Owner.Creature.Side || combatState.RoundNumber > 1) {
+        if (!Owner.Deck.Cards.Any(c => c is Prevention) || side != Owner.Creature.Side || combatState.RoundNumber > 1) {
             return;
         }
-        if (save.Get(this)[0] > 0) {
-            await PlayerCmd.GainEnergy(save.Get(this)[0], Owner);
-            save.Get(this)[0] = 0;
+        Prevention prevention = (Prevention) Owner.Deck.Cards.FirstOrDefault(c => c is Prevention);
+        if (save.Get(prevention)[0] > 0) {
+            await PlayerCmd.GainEnergy(save.Get(prevention)[0], Owner);
+            save.Get(prevention)[0] = 0;
         }
     }
 
     public override Decimal ModifyHandDraw(Player player, Decimal count) {
-        if (!Owner.Deck.Cards.Contains(this)) {
+        if (!Owner.Deck.Cards.Any(c => c is Prevention)) {
             return count;
         }
-        int amount = save.Get(this)[1];
-        save.Get(this)[1] = 0;
+        Prevention prevention = (Prevention) Owner.Deck.Cards.FirstOrDefault(c => c is Prevention);
+        int amount = save.Get(prevention)[1];
+        save.Get(prevention)[1] = 0;
         return player != Owner || player.Creature.CombatState.RoundNumber > 1 ? count : count + amount;
     }
     
@@ -49,8 +51,13 @@ public class Prevention : CustomCardModel {
         PreventionPower power = (PreventionPower) ModelDb.Power<PreventionPower>().ToMutable();
         power.DynamicVars.Energy.BaseValue = DynamicVars.Energy.BaseValue;
         await PowerCmd.Apply(power, Owner.Creature, DynamicVars.Cards.BaseValue, Owner.Creature, this);
-        save.Get(this)[0] += DynamicVars.Energy.IntValue;
-        save.Get(this)[1] += DynamicVars.Cards.IntValue;
+        foreach (CardModel card in Owner.Deck.Cards) {
+            if (card is Prevention prevention) {
+                save.Get(prevention)[0] += DynamicVars.Energy.IntValue;
+                save.Get(prevention)[1] += DynamicVars.Cards.IntValue;
+                break;
+            }
+        }
     }
     
     protected override void OnUpgrade() => DynamicVars.Cards.UpgradeValueBy(1);

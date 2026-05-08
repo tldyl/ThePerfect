@@ -12,6 +12,7 @@ using MegaCrit.Sts2.Core.Logging;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Saves.Runs;
 using ThePerfect.Cards.PerfectCard;
+using ThePerfect.Enums;
 using ThePerfect.Pools;
 
 namespace ThePerfect.Relics;
@@ -29,6 +30,8 @@ public class UpgradedCore : CustomRelicModel, IClickableRelic {
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [
         HoverTipFactory.FromCard<ScaleUpBeam>(),
         HoverTipFactory.FromCard<ScaleDownBeam>(),
+        HoverTipFactory.FromKeyword(PerfectEnums.ScaleUp),
+        HoverTipFactory.FromKeyword(PerfectEnums.ScaleDown)
     ];
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new IntVar("Counter", 3)

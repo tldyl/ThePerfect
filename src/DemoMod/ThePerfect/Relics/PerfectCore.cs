@@ -6,11 +6,13 @@ using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Multiplayer;
 using MegaCrit.Sts2.Core.Entities.Relics;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
+using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Logging;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Saves.Runs;
 using ThePerfect.Cards.PerfectCard;
+using ThePerfect.Enums;
 using ThePerfect.Pools;
 
 namespace ThePerfect.Relics;
@@ -24,6 +26,12 @@ public class PerfectCore : CustomRelicModel, IClickableRelic {
     public override bool IsUsedUp => _counter <= 0;
     public GameActionType GameActionType => GameActionType.CombatPlayPhaseOnly;
     public TargetType TargetType => TargetType.None;
+    protected override IEnumerable<IHoverTip> ExtraHoverTips => [
+        HoverTipFactory.FromCard<ScaleUpBeam>(),
+        HoverTipFactory.FromCard<ScaleDownBeam>(),
+        HoverTipFactory.FromKeyword(PerfectEnums.ScaleUp),
+        HoverTipFactory.FromKeyword(PerfectEnums.ScaleDown)
+    ];
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new IntVar("Counter", 6)
     ];
