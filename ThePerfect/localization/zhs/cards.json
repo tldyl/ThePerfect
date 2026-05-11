@@ -78,5 +78,16 @@
   "THEPERFECT-UNSTABLE_TRANSITION.title": "不稳定跃迁",
   "THEPERFECT-UNSTABLE_TRANSITION.description": "抽牌直到抽满[gold]手牌[/gold]。\n[gold]消耗[/gold]你抽牌堆中的所有牌。",
   "THEPERFECT-NAN.title": "N.A.N.",
-  "THEPERFECT-NAN.description": "获得{Block:diff()}点[gold]格挡[/gold]。\n[gold]生成[/gold]{Orb}个[gold]黑暗[/gold]充能球。"
+  "THEPERFECT-NAN.description": "获得{Block:diff()}点[gold]格挡[/gold]。\n[gold]生成[/gold]{Orb}个[gold]黑暗[/gold]充能球。",
+  "THEPERFECT-COOLHEADED.title": "冷静头脑",
+  "THEPERFECT-COOLHEADED.description": "[gold]生成[/gold]{Orb}个[gold]冰霜[/gold]充能球。\n抽{Orb}张牌。",
+  "THEPERFECT-ARBITRATION.title": "仲裁",
+  "THEPERFECT-ARBITRATION.description": "造成{Damage:diff()}点伤害。\n对相邻敌人造成一半的伤害。",
+  "THEPERFECT-VIRUS.title": "病毒",
+  "THEPERFECT-VIRUS.description": "{IfUpgraded:show:[gold]生成[/gold]{Orb}个[gold]黑暗[/gold]充能球。\n|}本回合[gold]生成[/gold]充能球时，改为触发最左侧和最右侧充能球的被动效果。",
+  "THEPERFECT-OVERCLOCK.title": "超频",
+  "THEPERFECT-OVERCLOCK.description": "抽{Cards:diff()}张牌。\n将一张[gold]灼伤[/gold]加入你的[gold]弃牌堆[/gold]。",
+  "THEPERFECT-COPY_AND_PASTE.title": "复制粘贴",
+  "THEPERFECT-COPY_AND_PASTE.description": "从手牌中选择一张牌，将抽牌堆顶部的牌变化为它的复制。",
+  "THEPERFECT-COPY_AND_PASTE.selectionScreenPrompt": "选择一张牌复制。"
 }
